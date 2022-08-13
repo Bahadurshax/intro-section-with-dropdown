@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-menu--5AbFpmTdj)
 - Live Site URL: [https://br-intro-section.netlify.app](https://br-intro-section.netlify.app)
 
 ## My process
