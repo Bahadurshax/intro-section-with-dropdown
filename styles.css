@@ -1,0 +1,209 @@
+/* Global styles start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Epilogue', sans-serif;
+    overflow: hidden;
+}
+
+img {
+    vertical-align: middle;
+}
+/* Global styles end */
+
+
+/* utility classes start*/
+.d-flex {
+    display: flex;
+}
+
+.bordered {
+    padding: 10px 20px;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 12px;
+}
+
+.bordered:hover {
+    border-color: hsl(0, 0%, 8%);
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.btn-dark {
+    padding: 20px 30px;
+    border-radius: 12px;
+    background-color: hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+}
+/* utility classes end */
+
+
+/* header section styles start */
+.header {
+    padding: 30px 40px;
+    font-weight: 500;
+}
+
+/* menu wrapper */
+.navbar-collapse {
+    width: 100%;
+}
+
+/* 
+burger btn 
+display: none; by default
+it will be visible on mobile screen sizes
+*/
+.mobile-btn {
+    display: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* main menu */
+.main-nav {
+    margin-left: 60px;
+}
+
+.menu-list, .dropdown-menu {
+    list-style: none;
+}
+
+.menu-item + .menu-item {
+    margin-left: 40px;
+}
+
+.menu-link, .dropdown-link {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+.menu-link:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+/* 
+dropdown toggle btn
+arrow down img
+*/
+.dropdown.open .dropdown-toggle img {
+    transform: rotateX(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    width: max-content;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 8px 12px 12px #eee;
+    position: absolute;
+    top: 40px;
+}
+
+/* features dropdown menu */
+#features {
+    right: 0;
+}
+
+.dropdown-menu li + li {
+    margin-top: 15px;
+}
+
+.dropdown-link img {
+    margin-right: 10px;
+}
+
+/* login menu aligned right */
+.login-nav {
+    margin-left: auto;
+}
+/* header section styles end */
+
+
+/* intro section styles start */
+.intro {
+    height: 100vh;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.content-block {
+    max-width: 530px;
+    margin-top: 140px;
+}
+
+.content-block::after {
+    content: '';
+    height: 640px;
+    width: 480px;
+    background: url('images/image-hero-desktop.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 140px;
+    right: 130px;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%);
+    margin-bottom: 60px;
+}
+
+.callout-text {
+    max-width: 430px;
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.clients {
+    margin-top: 100px;
+}
+
+.clients img + img {
+    margin-left: 35px;
+}
+/* intro section styles end */
+
+.attribution {
+    font-size: 14px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

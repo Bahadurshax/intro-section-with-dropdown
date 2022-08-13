@@ -1,0 +1,115 @@
+/* for mobile screen sizes */
+@media screen and (max-width: 480px) {
+    /* header section styles start */
+    .header {
+        padding: 20px 15px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-btn {
+        display: block;
+    }
+
+    .navbar-collapse, .menu-list {
+        flex-direction: column;
+    }
+
+    .navbar-collapse {
+        height: 100vh;
+        width: 240px;
+        padding: 25px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -240px;
+        background-color: #fff;
+        z-index: 1;
+        transition: right 0.3s ease-out;
+    }
+
+    .navbar-collapse.show {
+        right: 0;
+    }
+
+    .main-nav, .login-nav, .menu-item + .menu-item {
+        margin-left: 0;
+    }
+
+    .main-nav, .login-nav {
+        margin-top: 60px;
+    }
+
+    .menu-item + .menu-item {
+        margin-top: 25px;
+    }
+
+    .login-nav {
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        background-color: transparent;
+        box-shadow: none;
+        position: static;
+    }
+    /* header section styles end */
+
+
+    /* intro section styles start */
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .content-block {
+        text-align: center;
+        margin-top: 330px;
+    }
+
+    .content-block::after {
+        content: none;
+    }
+
+    .content-block::before {
+        content: '';
+        height: 282px;
+        width: 100%;
+        background: url('images/image-hero-mobile.png') no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+    }
+
+    .main-title {
+        font-size: 2.4rem;
+    }
+
+    .main-title, .callout-text {
+        margin-bottom: 25px;
+    }
+
+    .btn.btn-dark {
+        padding: 10px 20px;
+    }
+
+    .clients {
+        margin-top: 45px;
+        text-align: center;
+    }
+
+    .clients img {
+        width: 64px;
+    }
+
+    .clients img + img {
+        margin-left: 25px;
+    }
+    /* intro section styles end */
+
+}
