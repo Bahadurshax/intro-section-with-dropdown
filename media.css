@@ -28,11 +28,11 @@
         transition: transform 0.3s ease-out;
     }
 
-    .navbar-collapse[aria-expanded="true"] {
+    .navbar-collapse[data-visible="true"] {
         transform: translateX(0px);
     }
 
-    .navbar-collapse[aria-expanded="true"] ~ .menu-btn {
+    .menu-btn[aria-expanded="true"] {
         background-image: url('images/icon-close-menu.svg');
     }
 
@@ -44,7 +44,7 @@
         transition: all .3s ease;
     }
     
-    .navbar-collapse[aria-expanded="true"] ~ .overlay {
+    .navbar-collapse[data-visible="true"] ~ .overlay {
         background-color: rgba(0, 0, 0, 0.75);
         z-index: 10;
     }

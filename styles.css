@@ -104,11 +104,11 @@ body {
     position: relative;
 }
 
-.dropdown[aria-expanded="true"] .dropdown-menu {
+.dropdown[data-visible="true"] .dropdown-menu {
     display: block;
 }
 
-.dropdown[aria-expanded="true"] .dropdown-toggle img {
+.dropdown[data-visible="true"] .dropdown-toggle img {
     transform: rotateX(180deg);
 }
 

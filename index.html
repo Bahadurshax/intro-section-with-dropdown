@@ -24,15 +24,22 @@
                 <img src="images/logo.svg" alt="logo">
             </a>
 
-            <div class="navbar-collapse d-flex" id="menu" aria-expanded="false">
+            <button 
+            aria-label="Toggle the menu" 
+            aria-controls="menu"
+            aria-expanded="false" 
+            class="btn menu-btn"></button>
+            <!-- /.menu-btn -->
+
+            <div class="navbar-collapse d-flex" id="menu">
                 <ul class="main-nav menu-list d-flex">
                     <li class="menu-item dropdown">
 
-                        <button class="btn menu-link dropdown-toggle" aria-label="Toggle the features menu" aria-controls="features">
+                        <button class="btn menu-link dropdown-toggle" aria-label="Toggle the features menu" aria-controls="features" aria-expanded="false">
                             Features <img aria-hidden="true" src="images/icon-arrow-down.svg" alt="arrow">
                         </button>
 
-                        <ul class="dropdown-menu" id="features" aria-expanded="false">
+                        <ul class="dropdown-menu" id="features" data-visible="false">
                             <li>
                                 <a href="#" class="dropdown-link">
                                     <img aria-hidden="true" src="images/icon-todo.svg" alt="todo icon"> Todo List
@@ -60,10 +67,10 @@
                     </li>
                     <!-- /.dropdown -->
                     <li class="menu-item dropdown">
-                        <button class="btn menu-link dropdown-toggle" aria-label="Toggle the company menu" aria-controls="company">
+                        <button class="btn menu-link dropdown-toggle" aria-label="Toggle the company menu" aria-controls="company" aria-expanded="false">
                             Company <img aria-hidden="true" src="images/icon-arrow-down.svg" alt="arrow">
                         </button>
-                        <ul class="dropdown-menu" id="company" aria-expanded="false">
+                        <ul class="dropdown-menu" id="company">
                             <li><a href="#" class="dropdown-link">History</a></li>
                             <li><a href="#" class="dropdown-link">Our Team</a></li>
                             <li><a href="#" class="dropdown-link">Blog</a></li>
@@ -84,12 +91,6 @@
             
             <div class="overlay"></div>
 
-            <button 
-            aria-label="Toggle the menu" 
-            aria-controls="menu" 
-            class="btn menu-btn"></button>
-            <!-- /.menu-btn -->
-
         </nav>
         <!-- /.navbar -->
     </header>
@@ -108,7 +109,7 @@
                         
                         <button class="btn btn-dark">Learn more</button>
     
-                        <div class="clients d-flex" aria-label="Our clients">
+                        <div class="clients d-flex">
                             <img src="images/client-databiz.svg" alt="databiz">
                             <img src="images/client-audiophile.svg" alt="audiophile">
                             <img src="images/client-meet.svg" alt="meet">
