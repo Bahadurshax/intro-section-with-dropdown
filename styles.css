@@ -1,4 +1,6 @@
-/* Global styles start */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+/* GLOBAL STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +10,12 @@
 body {
     background-color: hsl(0, 0%, 98%);
     font-family: 'Epilogue', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    font-size: 18px;
 }
 
-img {
-    vertical-align: middle;
-}
-/* Global styles end */
 
-
-/* utility classes start*/
+/* UTILITY CLASSES */
 .d-flex {
     display: flex;
 }
@@ -39,13 +37,13 @@ img {
 }
 
 .btn-dark {
-    padding: 20px 30px;
+    padding: 15px 30px;
     border-radius: 12px;
     background-color: hsl(0, 0%, 8%);
-    border: 2px solid hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
     color: hsl(0, 0%, 98%);
-    font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -53,67 +51,64 @@ img {
     background-color: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 8%);
 }
-/* utility classes end */
 
 
-/* header section styles start */
+/* HEADER STYLES */
 .header {
     padding: 30px 40px;
-    font-weight: 500;
 }
 
-/* menu wrapper */
+.logo {
+    margin-right: 3rem;
+    position: relative;
+    z-index: 100;
+}
+
 .navbar-collapse {
     width: 100%;
+    justify-content: space-between;
 }
 
-/* 
-burger btn 
-display: none; by default
-it will be visible on mobile screen sizes
-*/
-.mobile-btn {
+.menu-btn {
     display: none;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    z-index: 1000;
+    aspect-ratio: 1;
+    width: 26px;
+    background-image: url('images/icon-menu.svg');
+    background-repeat: no-repeat;
+    right: 15px;
 }
 
-/* main menu */
-.main-nav {
-    margin-left: 60px;
-}
-
+/* MAIN MENU */
 .menu-list, .dropdown-menu {
     list-style: none;
 }
 
-.menu-item + .menu-item {
-    margin-left: 40px;
+.menu-list {
+    gap: 2.2rem;
 }
 
 .menu-link, .dropdown-link {
     text-decoration: none;
     color: hsl(0, 0%, 41%);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .menu-link:hover {
     color: hsl(0, 0%, 8%);
 }
 
-/* dropdown */
 .dropdown {
     position: relative;
 }
 
-.dropdown.open .dropdown-menu {
+.dropdown[aria-expanded="true"] .dropdown-menu {
     display: block;
 }
 
-/* 
-dropdown toggle btn
-arrow down img
-*/
-.dropdown.open .dropdown-toggle img {
+.dropdown[aria-expanded="true"] .dropdown-toggle img {
     transform: rotateX(180deg);
 }
 
@@ -123,7 +118,7 @@ arrow down img
     padding: 25px;
     border-radius: 12px;
     background-color: #fff;
-    box-shadow: 0 8px 12px 12px #eee;
+    box-shadow: 0 10px 20px 5px #ccc;
     position: absolute;
     top: 40px;
 }
@@ -137,53 +132,44 @@ arrow down img
     margin-top: 15px;
 }
 
-.dropdown-link img {
-    margin-right: 10px;
+.dropdown-link > img {
+    margin-inline-end: 0.5rem;
 }
 
-/* login menu aligned right */
-.login-nav {
-    margin-left: auto;
-}
-/* header section styles end */
-
-
-/* intro section styles start */
-.intro {
-    height: 100vh;
-}
-
+/* INTRO SECTION STYLES */
 .container {
+    width: 100%;
     max-width: 1150px;
-    margin: 0 auto;
+    margin-inline: auto;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
 }
 
 .content-block {
     max-width: 530px;
-    margin-top: 140px;
 }
 
-.content-block::after {
-    content: '';
-    height: 640px;
-    width: 480px;
-    background: url('images/image-hero-desktop.png') no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 140px;
-    right: 130px;
+.hero-image {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1.33;
+    float: right;
 }
 
 .main-title {
-    font-size: 5rem;
+    font-size: clamp(2rem, 0.9437rem + 5.0704vw, 5rem);
     font-weight: 700;
     color: hsl(0, 0%, 8%);
-    margin-bottom: 60px;
+    margin-block: 3rem;
 }
 
 .callout-text {
     max-width: 430px;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     color: hsl(0, 0%, 41%);
     line-height: 1.6;
@@ -191,17 +177,21 @@ arrow down img
 }
 
 .clients {
-    margin-top: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-start: 3rem;
 }
 
-.clients img + img {
-    margin-left: 35px;
+/* FOOTER STYLES */
+footer {
+    padding: 30px 15px;
 }
-/* intro section styles end */
 
 .attribution {
-    font-size: 14px; 
+    font-size: 1rem; 
     text-align: center;
+    line-height: 1.6;
 }
 
 .attribution a { 
